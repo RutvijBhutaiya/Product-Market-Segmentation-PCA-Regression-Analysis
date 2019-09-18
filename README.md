@@ -1,2 +1,13 @@
-# Product-Market-Segmentation-PCA-Regression-Analysis
-Perform Principle Component Analysis on the Data set and use Regression method to customer satisfaction for market segmentation on FMCG product.  
+In Progress...
+
+## Product Market Segmentation:  PCA & Regression Analysis
+
+<br>
+
+### Table of Content
+
+<br>
+
+### Objective
+
+The objective of the project is to perform Factor Analysis to reduce variables in context of market segmentation for hair product service and implement regression model to predict customer satisfaction based on independent variables.

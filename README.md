@@ -121,6 +121,14 @@ For better visualization we have presented correlation matrix with heat maps.
 ```
 <p align="center"><img width=72% src=https://user-images.githubusercontent.com/44467789/65815718-e7ee0280-e210-11e9-82c3-967c3d52e32a.jpg>
 
+As we see in following correlation table, correlation between SalesFImage and Ecom is 0.7915, WartyClaim and TechSup is 0.7971, CompRes and DelSpeed is 0.865, DelSpeed and ProdLine is 0.602, OrdBilling and CompRes is 0.76, OrdBilling and DelSpeed is 0.75,  We can also see negative correlation between ProdLine and ComPricing is (- 0.495), ProdQual and ComPricing is (- 0.401) etc.  
+
+These correlations within independent variables are multicollinearity. And, before performing regression analysis, multicollinearity should be removed by factor analysis and PCA. So, all correlated independent variables could be transferred in to non-correlated variables and then we would perform regression analysis. 
+
+```
+> print(cor(hair), digits = 2)
+```
+<p align="center"><img width=79% src=https://user-images.githubusercontent.com/44467789/65815837-fab50700-e211-11e9-99be-e2a754571a06.jpg>
 
 
 <br>

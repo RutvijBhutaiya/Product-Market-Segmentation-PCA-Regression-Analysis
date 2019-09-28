@@ -157,7 +157,19 @@ Kaiser rule for PCA interprets factors based on Eigen values. Normally, Kaiser R
 ```
 <p align="center"><img width=79% src=https://user-images.githubusercontent.com/44467789/65815807-b6296b80-e211-11e9-82f5-16e1c63452bf.jpg>
 	
-	
+```	
+> eigenvalue = haireigen$values
+> factor = c(1:11)
+
+> Scree = data.frame(factor,eigenvalue)
+
+> plot(Scree, main = 'Scree Plot', xlab = 'Factors', ylab = 'Eigen Values', col = 'Blue')
+
+      >lines(Scree, col = 'maroon')
+```
+
+<p align="center"><img width=69% src=https://user-images.githubusercontent.com/44467789/65815891-921a5a00-e212-11e9-90ca-3f7d513b232a.jpg>
+
 
 <br>
 

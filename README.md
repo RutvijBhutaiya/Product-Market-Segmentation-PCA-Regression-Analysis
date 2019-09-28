@@ -98,6 +98,29 @@ As shown in Annexure 1, variables’ w-statistics is more than 95% [except ProdQ
 
 ### Implement Principal Component Analysis and Factor Analysis
 
+Now, before we apply factor analysis and principal component analysis, we present the correlation between variables. In this case, our objective should be to find high correlation between independent variables.  However, in data set it could also be possible that independent variables are correlated with each other. In statistics, correlations within independent variables are called multicollinearity. 
+
+As we see in scattered plot, due to 11 variables we are not able to get clear visibility. In the scattered plot formation we have dropped ID and Satisfaction variable.
+
+To perform PCA and Factor Analysis we consider only independent variables and check whether there are any correlations within them or not. Hence we are not considering ID and Satisfaction variables for implementing PCA and Factor Analysis study. 
+
+```
+
+#Scattered Plot from hair.csv date
+> pairs(hair[,2:12])
+```
+<p align="center"><img width=80% src=https://user-images.githubusercontent.com/44467789/65815708-b5dca080-e210-11e9-9ee2-c5152cf9c6d5.jpg>
+
+Due to low visibility of scattered plot from hair.csv date we are not able to represent clear picture of correlations within variables. Hence, we have created correlation table for independent variables.  
+
+For better visualization we have presented correlation matrix with heat maps. 
+
+```
+> library(ggcorrplot)
+> ggcorrplot(cor(hair), type = 'lower')
+```
+<p align="center"><img width=72% src=https://user-images.githubusercontent.com/44467789/65815718-e7ee0280-e210-11e9-82c3-967c3d52e32a.jpg>
+
 
 
 <br>

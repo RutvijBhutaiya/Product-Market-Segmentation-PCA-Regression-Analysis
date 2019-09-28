@@ -130,6 +130,34 @@ These correlations within independent variables are multicollinearity. And, befo
 ```
 <p align="center"><img width=79% src=https://user-images.githubusercontent.com/44467789/65815837-fab50700-e211-11e9-99be-e2a754571a06.jpg>
 
+To collect more proof on homogeneity of variables, Bartlett k-squared test done on data set. It shows that p-value is less than 0.05 and hence Null Hypotheses rejected. This indicates reduction in independent data variables should be done before performing regression analysis.
+
+```
+> bartlett.test(hair)
+
+	Bartlett test of homogeneity of variances
+
+data:  hair
+Bartlett's K-squared = 146.4, df = 10, p-value < 2.2e-16
+```
+
+Now, before reducing variable we will perform PCA to identity right number of factors based on Scree plot and Eigen values. For PCA we installed ‘nFactors’ package to perform factor analysis. 
+
+As shown in following table Eigen values are in decreasing trend and Eigen vectors are principle components. Eigen value represents decomposition matrix, in other words, largest variance summarized or reduction. 
+
+Kaiser rule for PCA interprets factors based on Eigen values. Normally, Kaiser Rule takes value greater than 1, as factors.  Hence, in the following table there are 4 considerable factors, which are greater than 1. 
+
+```
+> library(nFactors)
+
+> haireigen = eigen(cor(hair))
+
+> haireigen
+
+```
+<p align="center"><img width=79% src=https://user-images.githubusercontent.com/44467789/65815807-b6296b80-e211-11e9-82f5-16e1c63452bf.jpg>
+	
+	
 
 <br>
 

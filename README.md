@@ -170,6 +170,51 @@ Kaiser rule for PCA interprets factors based on Eigen values. Normally, Kaiser R
 
 <p align="center"><img width=69% src=https://user-images.githubusercontent.com/44467789/65815891-921a5a00-e212-11e9-90ca-3f7d513b232a.jpg>
 
+Now, after identifying number of factors based on Eigen values and Scree plot, we need to fill scores for these 4 components and should be given subjective names to the factors to perform regression analysis. Now, these 4 factors will become independent variables for dependent variable – Customer Satisfaction in our regression model. 
+
+Factor analysis is hallmark for minimizing variables with maximum information. With the help of library psych we have studied Rotational approach to solve the multicollinearity problem. 
+
+For Orthogonal rotation we are using varimax rotate. Varimax rotation is rotation in which we assume that there is no correlation between components [RC1 to RC4].
+
+```
+> library(psych)
+
+> rotate = principal(hair, nfactors = 4, rotate = 'varimax')
+> print(rotate, digits = 4)
+```
+
+<p align="center"><img width=69% src=https://user-images.githubusercontent.com/44467789/65833772-6b7f2080-e2f1-11e9-83c0-74d55c1e6e51.jpg>
+
+As shown in Principal Component Analysis table, there are 4 components RC1, RC2 RC3, and RC4. In PCA table, ss loading values indicates Eigen values. However, eigen values in PCA table varies from ‘haireigen’, because here we are doing orthogonal rotation with varimax rotation. If we do un-rotation then ss loading will be exactly same as ‘haireigen’. To get a better picture on what factors means we prefer to study orthogonal rotation. 
+
+Before we start analyzing PCA table, we should know what RC1, RC2, RC3 and RC4 loading means to variables. In factor analysis our objective is to collapse variables, and in cluster analysis we collapse observations. As we see in PCA table, RC1 for ProdQual is 0.0015, which means correlation for RC1 and Product Quality variables is 0.15%. 
+
+Similarly, RC2 and Product Quality are (-1.27%) negatively correlative. From the same table we have observed that Product Quality has strong positive correlation of 0.8757 with RC4 component. 
+
+Similarly, loadings from PCA table represent correlation between individual variable with respective components. 
+
+Now, as we do further analysis on PCA table, we came across proportion variance and cumulative variance. 
+Here, proportion variance is derived based on Eigen value, % Proportion var = Eigen value / number of variables.
+
+So, RC1 proportion var is 0.2630, where eigen value (ss loading) is 2.8927 and number of variables are 11. Similarly for RC2, RC3 and RC4, proportion var are 0.2031, 0.1687 and 0.1612 respectively. 
+
+Next term, cumulative var represents percentage of information cumulatively distributed across components, where, RC1 and RC2 together carry 46.6% information of the data. And RC1, RC2, RC3 and RC4 all together carry 79.5% of information from the original data set. In other words, with components RC1, RC2, RC3 and RC4 together we are able to explain 79.5% of information from the original data set. 
+
+As we further analyze PCA table, we also see h2 column. Column h2 represents communality. Communality means common variance captured by RC1, RC2, RC3, and RC4 components. 
+
+For example, communality for Ecom variable is 0.7771. Ecom communality derived from RC1, RC2, RC3 and RC4 loadings, of 0.0568, 0.8706, 0.0475, and (-0.1175) respectively. Ecom communality is sum of squared of all the 4 components loadings. 
+
+Now, as we closely analyze communality column we can see that DelSpeed variable’s communality is highest, 0.9144 among all the study variables. That means DelSpeed carry 91.4% information across all the 4-RC components.
+
+Similarly, ProdQual and Ecom variables communality represents 76.8% and 77.7% information across all the components, and similarly explained for all the variables. 
+
+As, we study further, we can assume that, we should have derived factor names based on Un-rotational PCA study also, but, due to direct loading we were not able to present the clear message for factors. And hence, for powerful analysis and higher confidence we performed orthogonal rotation. 
+
+
+<p align="center"><img width=69% src=https://user-images.githubusercontent.com/44467789/65833790-b00abc00-e2f1-11e9-8400-74d480798eae.jpg>
+	
+
+
 
 <br>
 

@@ -13,7 +13,7 @@ In Progress...
 - [Objective](#objective)
 - [Setting Up R Studio and Data Variables](#setting-up-r-studio-and-data-variables)
 - [Descriptive Statistics](#descriptive-statistics)
--
+- [Implement Principal Component Analysis and Factor Analysis](#implement-principal-component-analysis-and-factor-analysis)
 
 <br>
 
@@ -183,7 +183,7 @@ For Orthogonal rotation we are using varimax rotate. Varimax rotation is rotatio
 > print(rotate, digits = 4)
 ```
 
-<p align="center"><img width=69% src=https://user-images.githubusercontent.com/44467789/65833772-6b7f2080-e2f1-11e9-83c0-74d55c1e6e51.jpg>
+<p align="center"><img width=72% src=https://user-images.githubusercontent.com/44467789/65833772-6b7f2080-e2f1-11e9-83c0-74d55c1e6e51.jpg>
 
 As shown in Principal Component Analysis table, there are 4 components RC1, RC2 RC3, and RC4. In PCA table, ss loading values indicates Eigen values. However, eigen values in PCA table varies from ‘haireigen’, because here we are doing orthogonal rotation with varimax rotation. If we do un-rotation then ss loading will be exactly same as ‘haireigen’. To get a better picture on what factors means we prefer to study orthogonal rotation. 
 
@@ -211,7 +211,7 @@ Similarly, ProdQual and Ecom variables communality represents 76.8% and 77.7% in
 As, we study further, we can assume that, we should have derived factor names based on Un-rotational PCA study also, but, due to direct loading we were not able to present the clear message for factors. And hence, for powerful analysis and higher confidence we performed orthogonal rotation. 
 
 
-<p align="center"><img width=69% src=https://user-images.githubusercontent.com/44467789/65833790-b00abc00-e2f1-11e9-8400-74d480798eae.jpg>
+<p align="center"><img width=90% src=https://user-images.githubusercontent.com/44467789/65833790-b00abc00-e2f1-11e9-8400-74d480798eae.jpg>
 	
 
 

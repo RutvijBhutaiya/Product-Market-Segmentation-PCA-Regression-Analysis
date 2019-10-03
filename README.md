@@ -14,6 +14,7 @@ In Progress...
 - [Setting Up R Studio and Data Variables](#setting-up-r-studio-and-data-variables)
 - [Descriptive Statistics](#descriptive-statistics)
 - [Implement Principal Component Analysis and Factor Analysis](#implement-principal-component-analysis-and-factor-analysis)
+- [Setting up Data Variables for Regression Analysis](#setting-up-data-variables-for-regression-analysis)
 
 <br>
 
@@ -213,8 +214,44 @@ As, we study further, we can assume that, we should have derived factor names ba
 
 <p align="center"><img width=90% src=https://user-images.githubusercontent.com/44467789/65833790-b00abc00-e2f1-11e9-8400-74d480798eae.jpg>
 	
+As shown in biplot for Principal Component Analysis, we can conclude that RC1 combines, CompRes, OrdBilling, and DelSpeed variables with higher correlation matrix of 0.9258, 0.8638 and 0.9382 respectively. 
 
+RC2 combines, Ecom, Advertising, and SalesFImage with higher correlation matrix of 0.8706, 0.7415 and 0.9005 respectively.
 
+RC3 combines, TechSup and WartyClaim with higher correlation matrix of 0.9392 and 0.9310 respectively.
+
+RC4 combines, ComPricing, ProdQual and ProdLine with higher correlation of (-0.7226), 0.8757 and 0.6420 respectively. 
+
+And hence based on subjective characteristic all the variables will collapse to 4 factors. These 4 factor names are, Sales Service Desk represents RC1, Brand Marketing Desk represents RC2, BackEnd Support Desk represents RC3 and Strategic Research Desk represents RC4. 
+
+To elaborate more on factors, Sales Service Desk represents Complaint Resolution, Order & Billing and Delivery Speed variables. 
+
+Brand Marketing Desk represents E-Commerce, Advertising, and Salseforce Image variables.
+
+BackEnd Support Desk represents Technical Support and Warranty & Claims variables.
+
+And Strategic Research Desk represents Competitive Pricing, Product Quality, and Product Line variables. 
+
+To perform regression analysis we will consider these factors as independent variables and we will name the factors for simplicity, Sales Service Desk as ServDesk, Brand Marketing Desk as MktDesk, BackEnd Support Desk and SuppDesk and Strategic Research Desk as RechDesk. 
+
+Based on ServDesk, MktDesk, SuppDesk and RechDesk variables we will perform regression analysis and predict how Customer Satisfaction as depended variable changes based on these 4 independent variables. 
+
+Before we begin our regression analysis, we will create new .csv file based on factor scores. We have name this .csv file as newhair.csv. 
+
+```
+#Write newhair.csv file for Regression Analysis
+
+      > rotate$scores
+
+      > newhair = as.data.frame(rotate$scores)
+      > write.csv(newhair, "newhair.csv")
+```
+
+<br>
+
+### Setting up Data Variables for Regression Analysis
+
+<br>
 
 <br>
 

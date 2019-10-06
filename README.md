@@ -15,6 +15,7 @@ In Progress...
 - [Descriptive Statistics](#descriptive-statistics)
 - [Implement Principal Component Analysis and Factor Analysis](#implement-principal-component-analysis-and-factor-analysis)
 - [Setting up Data Variables for Regression Analysis](#setting-up-data-variables-for-regression-analysis)
+- [Regression Model](#regression-model)
 
 <br>
 
@@ -250,6 +251,37 @@ Before we begin our regression analysis, we will create new .csv file based on f
 <br>
 
 ### Setting up Data Variables for Regression Analysis
+
+To perform regression analysis, we will load newhair.csv file and renamed the variables according to factor names.  We have also loaded original hair.csv file to observe Satisfaction variable. 
+
+As we see in the following R studio code, we have used cbind.data.frame() function to present 18 variables and 100 observations from both the .csv files. 
+
+```
+> setwd("C:/Users/server/Desktop/New R")
+
+	> newhair = read.csv('newhair.csv')
+	> hair = read.csv('hair.csv')
+
+     	> names(newhair) = c("x","ServDesk","MktDesk","SuppDesk","RechDesk")
+
+
+	> newhair = cbind.data.frame(newhair,hair)
+
+	> View(newhair)
+```
+However, we require only independent variables ServDesk, MktDesk, SuppDesk, and RechDesk along with dependent variable Satisfaction. 
+```
+
+	> newhair = newhair[, -6:-17]
+
+	> newhair = newhair [, -1]
+
+	> View(newhair)
+```
+
+<br>
+
+### Regression Model
 
 <br>
 

@@ -254,7 +254,7 @@ Before we begin our regression analysis, we will create new .csv file based on f
 
 To perform regression analysis, we will load newhair.csv file and renamed the variables according to factor names.  We have also loaded original hair.csv file to observe Satisfaction variable. 
 
-As we see in the following R studio code, we have used cbind.data.frame() function to present 18 variables and 100 observations from both the .csv files. 
+As we see in the following R studio code, we have used cbind.data.frame() function to present 18 variables and 100 observations from both the .csv files - [hair.csv](https://github.com/RutvijBhutaiya/Product-Market-Segmentation-PCA-Regression-Analysis/blob/master/hair.csv) & [newhair.csv](https://github.com/RutvijBhutaiya/Product-Market-Segmentation-PCA-Regression-Analysis/blob/master/newhair.csv)
 
 ```
 > setwd("C:/Users/server/Desktop/New R")
@@ -263,20 +263,14 @@ As we see in the following R studio code, we have used cbind.data.frame() functi
 	> hair = read.csv('hair.csv')
 
      	> names(newhair) = c("x","ServDesk","MktDesk","SuppDesk","RechDesk")
-
-
 	> newhair = cbind.data.frame(newhair,hair)
-
-	> View(newhair)
 ```
+
 However, we require only independent variables ServDesk, MktDesk, SuppDesk, and RechDesk along with dependent variable Satisfaction. 
 ```
 
 	> newhair = newhair[, -6:-17]
-
 	> newhair = newhair [, -1]
-
-	> View(newhair)
 ```
 
 <br>

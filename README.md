@@ -295,6 +295,67 @@ This graph is based on Ordinary Least Squared Method (OLS). With the scatter gra
 ```
 <p align="center"><img width=72% src=https://user-images.githubusercontent.com/44467789/67869571-a0320200-fb53-11e9-962c-70bc2773a399.gif>
 	
+As we see in the scattered graph ServDesk, MktDesk and RechDesk has linear relationship with dependent variable Customer Satisfaction.  However, SuppDesk shows no correlation with dependent variable. Bases on the scattered graph we can also present the data tightness of fit to the line is normal for all the four variables. 
+
+Normal tightness of fit also indicates that there would be low to normal R-square value in the regression model. Based on the SuppDesk scattered plot we can assume SuppDesk’s p-value should be more than 0.05, which indicates low significant to the model. 
+
+Now, based on our date set for newhair customer satisfaction study, let us analyze and built multi linear regression model. 
+
+Y hat = B0 + B1*x1 + B2*x2 + B3*x3 + B4*x4
+
+Where,
+Y hat is dependent variable [Satisfaction]
+B0 is intercept or constant value
+B1 is slop for correlation to x1 variable [ServDesk]
+B2 is slop for correlation to x2 variable [MktDesk]
+B3 is slop for correlation to x3 variable [SuppDesk]
+B4 is slop for correlation to x4 variable [RechDesk]
+
+ As we study statistical summary model for multi linear regression, 
+B0 = 6.9180
+B1 = 0.6180
+B2 = 0.5097
+B3 = 0.0671
+B4 = 0.5403
+
+```
+> Model1 = lm(Satisfaction~ServDesk+MktDesk+SuppDesk+RechDesk)
+
+> summary(Model1)
+```
+ <p align="center"><img width=72% src=https://user-images.githubusercontent.com/44467789/67869791-edae6f00-fb53-11e9-9097-a511f7940a8b.gif>
+	
+And hence Regression model for newhair data set is 
+
+Satisfaction = 6.9180 + 0.6180*ServDesk + 0.5097*MktDesk + 0.067*SuppDesk + 0.5403*RechDesk
+
+Based on the model we can interpret that ServDesk has highest significant impact on customer satisfaction. After that MktDesk and RechDesk has good significant impact on customer satisfaction score. However, as we see, SuppDesk is lagging behind to add its significance in customer satisfaction. 
+
+Here, B0 value is constant, which indicates that 6.9180 is by default customer satisfaction due respect to independent variables. 
+
+Also, 0.6180*ServDesk indicates, one unit increase in ServDesk variable leads to customer satisfaction increase of 0.618. Similarly, one unit increase in MktDesk and RechDesk leads to increase in customer satisfaction by 0.509 and 0.540 respectively. 
+
+In the multi regression model, all the independent variables are positively correlated to dependent variables. As we see, SuppDesk does not significantly impact customer satisfaction, but still increase in one unit of SuppDesk leads to increase satisfaction by 0.067. 
+
+
+Now, as we move further in our study for multi linear regression for newhair data set, we came across R-square in our model. 
+
+R-square plays important role in the regression model. R-square value represents data fit to the model. 
+
+Based on regression model summary, R-square is 0.6605 and adjusted R-square is 0.6462. R-square is always between 0 to 1, most statistics suggest – normal R-square range between 0.70 to 0.90 (may vary according to model to model).
+
+In our study R-square is 0.6605, which is normal, not very high and not very low. Extreme low R-square value indicates that model is under fitted and has noisy variables. On the other side extreme high R-square value indicated that model is over fitted. However, higher the R-square the better the model (again depends on model to model). 
+
+
+As we analyzed scatter graphs for individual variables, based on relationship pattern we can clearly visualize normal R-square value. 
+
+Now, based on R-square value and scatter graphs analysis, how to confirm whether model fits best for regression analysis or not!
+
+For this we have performed Analysis of Variance or ANOVA on newhair data set,
+
+<p align="center"><img width=72% src=https://user-images.githubusercontent.com/44467789/67869936-29493900-fb54-11e9-92c1-233a322e9afa.png>
+	
+
 
 
 <br>

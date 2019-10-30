@@ -1,6 +1,7 @@
 In Progress...
 
-## Product Market Segmentation:  PCA & Regression Analysis
+## Product Market Segmentation: Customer Satisfaction  
+## PCA (Principal Component Analysis) & Regression Analysis
 
 <br>
 
@@ -443,7 +444,7 @@ Interestingly, with SuppDesk the lower end is (-0.0743), which means in worst ca
 
 <br>
 
-<br>
+
 
 ### Acknowledge
 

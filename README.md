@@ -277,6 +277,26 @@ However, we require only independent variables ServDesk, MktDesk, SuppDesk, and 
 
 ### Regression Model
 
+Before we begin regression analysis, we have plot scattered graph individually for independent and dependent variables. 
+
+This graph is based on Ordinary Least Squared Method (OLS). With the scatter graphs we can analyze visual patterns or relationship between independent and dependent variables.
+
+```
+> library(ggplot2)
+> par(mfrow=c(2,2))
+
+> plot(ServDesk, Satisfaction, main = 'Sales Servive Desk', col = 'cornflowerblue', abline(lm(Satisfaction~ServDesk)) )
+
+> plot(MktDesk, Satisfaction, main = 'Brand Marketing Desk', col = 'orange', abline(lm(Satisfaction~MktDesk)) )
+
+> plot(SuppDesk, Satisfaction, main = 'BackEnd Support Desk', col = 'firebrick2', abline(lm(Satisfaction~SuppDesk)) )
+
+> plot(RechDesk, Satisfaction, main = 'Strategic Research Desk', col = 'darkseagreen', abline(lm(Satisfaction~RechDesk)) )
+```
+<p align="center"><img width=72% src=https://user-images.githubusercontent.com/44467789/67869571-a0320200-fb53-11e9-962c-70bc2773a399.gif>
+	
+
+
 <br>
 
 <br>

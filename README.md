@@ -405,6 +405,42 @@ As we see in the graph, red mark line represents actual customer satisfaction an
 ```
 <p align="center"><img width=72% src=https://user-images.githubusercontent.com/44467789/67870250-8b09a300-fb54-11e9-9b0e-440f9c873fc0.gif>
 
+Red Line = Actual Customer Satisfaction 
+Blue Line = Predicted Customer Satisfaction 
+
+Now, based on the plot we can see the pattern between Actual and Predicted lines, which are much similar.  
+
+Further, we can also calculate confidence interval at 95% of the slop for customer satisfaction. 
+
+```
+> confint(Model1, "ServDesk")
+             2.5 %    97.5 %
+ServDesk 0.4766059 0.7594879
+
+> confint(Model1, "MktDesk")
+            2.5 %    97.5 %
+MktDesk 0.3682931 0.6511751
+
+> confint(Model1, "SuppDesk")
+               2.5 %    97.5 %
+SuppDesk -0.07430515 0.2085769
+
+> confint(Model1, "RechDesk")
+            2.5 %    97.5 %
+RechDesk 0.398878 0.6817601
+```
+ServDesk variable range presents population slop of satisfaction variable will remain either lower end at 0.4766 or upper end at 0.7594 with 95% confidence level. 
+
+Similarly, goes with MktDesk and RechDesk variables with 95% confidence level. 
+
+Interestingly, with SuppDesk the lower end is (-0.0743), which means in worst case customer rating for Technical Support and Warranty & Claims could impact regression model adversely. However, due to very low multiplier impact could be very small and can be ignored.  
+
+<br>
+
+### Conclusion 
+
+
+
 <br>
 
 <br>

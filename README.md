@@ -355,8 +355,55 @@ For this we have performed Analysis of Variance or ANOVA on newhair data set,
 
 <p align="center"><img width=72% src=https://user-images.githubusercontent.com/44467789/67869936-29493900-fb54-11e9-92c1-233a322e9afa.png>
 	
+Based on ANOVA summary results, we can interpret that p-value is less than 0.05 alpha level. P-value from the regression model summary is 2.2e-16, which means we are almost 100% right. And hence, we reject the Null Hypotheses and conclude that regression model is valid and regression model exists in population. 
 
+This means customer satisfaction is linearly dependent on Sales Service Desk, Brand Marketing Desk, BackEnd Support Desk, and Strategic and Research Desk.  
 
+However, individual p-value analysis on independent variables presents us that ServDesk, MktDesk and RechDesk are highly significant with p-value less than alpha 0.05 levels. And hence, has significant impact on dependent variable satisfaction.  But, SuppDesk is not significant and p-value is greater than 0.05 alpha levels. 
+
+Do we need to omit SuppDesk from our regression model?
+
+Let us study the new regression model without SuppDesk variable. 
+
+```
+> M2 = lm(Satisfaction~ServDesk+MktDesk+RechDesk)
+
+> summary(M2)
+
+```
+Statistically, based on p-value SuppDesk in not significant, but, in the new model summary, omitting SuppDesk does not make value addition in the original model quality.  And, without SuppDesk we are losing quality of our model. Because, R-square value [0.657] in new model is less than the R-square value [0.660] from the original model. In numerical terms omitting SuppDesk does not significantly improves the model quality. Hence we decide to include SuppDesk variable in the regression model. 
+
+Before we move further, there are few notes to revise, Why SuppDesk does not play significant role in customers’ satisfaction?
+
+For this, we went back in our study at Principal Component Analysis table, where we see that SuppDesk represents Technical Support and Warranty & Claims variables from the original data set. 
+
+Hence, vaguely we can conclude that generally in consumer goods product, people do not make purchases or does not create satisfaction index in their minds based on technical support or warranty & claims. However, based on product categories like investment products or software tools or any service related product could have more significance to technical support and warranty & claims. 
+
+Adding to this we cannot deny that in our study SuppDesk is 100% irreverent & not significant. Because we still have weak positive correlation of 0.0671 with dependent variable.
+
+In this Multi Linear Regression model for customer satisfaction analysis, we built regression model, we tested regression model, and now we will see the prediction accuracy on the regression model. 
+
+It is better to analyze actual customer satisfaction and predicted customer satisfaction in visuals. 
+
+As we see in the graph, red mark line represents actual customer satisfaction and blue mark line represents predicted customer satisfaction. 
+
+```
+> Actual = newhair$Satisfaction
+
+> Predict = predict(Model1)
+
+> BackTrack = data.frame(Actual, Predict)
+> View(BackTrack)
+
+> plot(Actual, col = 'red', main = 'Customer Satisfaction - Actual vs. Predicted', ylab = 'Customer Satisfaction points', xlab = 'Observations')
+
+> plot(Predict, col = 'blue', main = 'Customer Satisfaction - Actual vs. Predicted', ylab = 'Customer Satisfaction points', xlab = 'Observations')
+
+> lines(Predict, col = 'blue')
+
+> lines(Actual, col = 'red')
+```
+<p align="center"><img width=72% src=https://user-images.githubusercontent.com/44467789/67870250-8b09a300-fb54-11e9-9b0e-440f9c873fc0.gif>
 
 <br>
 

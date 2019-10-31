@@ -1,5 +1,3 @@
-In Progress...
-
 ## Product Market Segmentation: Customer Satisfaction  
 ## PCA (Principal Component Analysis) & Regression Analysis
 
@@ -17,6 +15,7 @@ In Progress...
 - [Implement Principal Component Analysis and Factor Analysis](#implement-principal-component-analysis-and-factor-analysis)
 - [Setting up Data Variables for Regression Analysis](#setting-up-data-variables-for-regression-analysis)
 - [Regression Model](#regression-model)
+- [Conclusion](#conclusion)
 
 <br>
 

@@ -440,6 +440,20 @@ Interestingly, with SuppDesk the lower end is (-0.0743), which means in worst ca
 
 ### Conclusion 
 
+Based on the consumer goods product – Hair – market segmentation data set, we can conclude that, due to multicollinearity within independent variables, we cannot apply regression model directly on the date set. 
+
+So, we created new data set – New hair – based on Principal Component Analysis. We have also recommended subjective new variable names as ServDesk, MktDesk, SuppDesk and RechDesk to the components. And then, based on Factor Analysis study we performed multi linear regressing.   
+
+Based on the regression model we have concluded that Sales Service Desk plays – the most significant role in customer satisfaction. That means company should be extra cautious in Complain Resolution, Order & Billing, and Delivery Speed fronts. If Delivery is late or complaint is not resolved in time may leads to decline in company’s revenue. However, Brand Marketing Desk and Strategic Research Desk also plays important role with 0.509 and 0.540 weighted respectively in the regression model. 
+
+From the study, we have also concluded that due to consumer goods product type customer do not give significance to Technical Support and Warranty & Claims, And hence SuppDesk variable does not play significance role in customer satisfaction index.
+
+In overall study, we removed multicollinearity from the data, we built regression model, we tested regression model and based on BackTrack data we also predicted Actual vs. Predicted customer satisfaction score in line chart. 
+
+In product or service based companies, if customer/prospect is satisfied with product, he will make purchase again and again for that particular product, and that works as revenue multiplier for the company. High customer satisfaction can also leads to cross selling of products. 
+
+Hence, we suggest management to conduct customer survey on regular bases to identify trends and relationship for higher customer satisfaction experience. 
+
 
 
 <br>

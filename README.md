@@ -453,10 +453,7 @@ In product or service based companies, if customer/prospect is satisfied with pr
 
 Hence, we suggest management to conduct customer survey on regular bases to identify trends and relationship for higher customer satisfaction experience. 
 
-
-
 <br>
-
 
 
 ### Acknowledge

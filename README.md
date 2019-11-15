@@ -1,5 +1,9 @@
 ## Product Market Segmentation: Customer Satisfaction  
 ## PCA (Principal Component Analysis) & Regression Analysis
+<br>
+
+#### Perform Principle Component Analysis on the Data set and use Regression method to customer satisfaction for market segmentation on FMCG product.
+
 
 <br>
 
